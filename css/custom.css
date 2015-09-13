@@ -1,4 +1,4 @@
-.reveal .kbd{
+.reveal .kbd, .reveal kbd{
     background-color: #f7f7f7;
     border: 1px solid #ccc;
     color: #333;
@@ -12,4 +12,8 @@
     white-space: nowrap;
     box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
     border-radius: 3px
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6{
+	text-transform: initial;
 }
