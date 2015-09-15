@@ -65,6 +65,58 @@
 				</section>
 
 				<section>
+					<h2>Chrome Channels</h2>
+					<table>
+						<tr>
+							<th></th>
+							<th>Channel</th>
+							<th>Description</th>
+						</tr>
+						<tr>
+							<td class="icon_column"><img src="images/chrome.png" alt="Chrome icon" class="icon"></td>
+							<td>Stable</td>
+							<td>Standard released version. Major updates every 6 weeks.</td>
+						</tr>
+						<tr>
+							<td class="icon_column"><img src="images/chrome.png" alt="Chrome icon" class="icon"></td>
+							<td>Beta</td>
+							<td>One step ahead of stable. Major updates every 6 weeks.</td>
+						</tr>
+						<tr>
+							<td class="icon_column"><img src="images/chrome.png" alt="Chrome icon" class="icon"></td>
+							<td>Dev</td>
+							<td>First tested version. Updated 2-3 times per week.</td>
+						</tr>
+						<tr>
+							<td class="icon_column"><img src="images/chrome-canary.png" alt="Chrome canary icon" class="icon"></td>
+							<td>Canary</td>
+							<td>Bleeding edge. Released daily. Untested and could be broken.</td>
+						</tr>
+					</table>
+				</section>
+
+				<section>
+					<h2>Chrome Channels</h2>
+					<table>
+						<tr>
+							<th></th>
+							<th>Channel</th>
+							<th>Description</th>
+						</tr>
+						<tr>
+							<td class="icon_column"><img src="images/chrome.png" alt="Chrome icon" class="icon"></td>
+							<td>Stable</td>
+							<td>Standard released version. Major updates every 6 weeks.</td>
+						</tr>
+						<tr>
+							<td class="icon_column"><img src="images/chrome-canary.png" alt="Chrome canary icon" class="icon"></td>
+							<td>Canary</td>
+							<td>Bleeding edge. Released daily. Untested and could be broken.</td>
+						</tr>
+					</table>
+				</section>
+
+				<section>
 					<h1>Design</h1>
 				</section>
 
@@ -91,6 +143,7 @@
 					<p>When editing <em style="color:#00DD55;">almost</em> any string containing a number in the Elements tab, the arrow keys can be used to increment/decrement the value</p>
 					<p class="point1">This works in suprising places, such as on Hex values</p>
 					<p class="point1">Hold the <kbd>shift</kbd> key to increment/decrement by 10 with the arrow keys</p>
+					<p class="point3">Hold the <kbd>alt</kbd> key to increment/decrement by .1 with the arrow keys</p>
 				</section>
 
 				<section>
@@ -260,13 +313,13 @@
 							</tr>
 							<tr>
 								<td>
-
+									<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd>
 								</td>
 								<td>
-									
+									<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd>
 								</td>
 								<td>
-									
+									List and search functions in current file
 								</td>
 							</tr>
 						</table>
@@ -356,10 +409,97 @@
 					<h1>Preserve Log</h1>
 					<p>Keeps the log between full page navigation. An option exists for this in both the Network tab and the Console</p>
 				</section>
+
+				<section>
+					<p>Right click on any XHR request in the Network tab to have the option to replay that request. Much simpler than using a tool like Postman when simply repeating a request.</p>
+				</section>
+
+				<section>
+					<p>Show additional/fewer columns in the Network tab by right clicking on any column header and choosing the additional columns to show.</p>
+				</section>
+
 				<section>
 					<p>Tired of having sequential messages stacked in the Console?</p>
 					<p class="fragment">Enable "Show timestamps" in the Settings to disable message stacking!</p>
 				</section>
+
+				<section>
+					<section>
+						<h1>Snippets</h1>
+					</section>
+					<section>
+						<p>The Sources tab allows you to define, store, and run snippets of JavaScript</p>
+						<p class="fragment">This lets you store useful utilities to run on any page.</p>
+					</section>
+					<section>
+						<h2><a href="https://gist.github.com/nicdaCosta/4072412">Grep</a></h2>
+						<p>Attaches a Grep method to the Object prototype</p>
+					</section>
+					<section>
+						<h2><a href="https://github.com/bgrins/devtools-snippets/blob/master/snippets/jquerify/jquerify.js">jQuerify</a></h2>
+						<p>Add jQuery to a page if it doesn't have it already.</p>
+					</section>
+					<section>
+						<h2><a href="https://github.com/bgrins/devtools-snippets/blob/master/snippets/log-globals/log-globals.js">Log Globals</a></h2>
+						<p>Logs global variables to the console. Use to find leaked globals.</p>
+					</section>
+					<section>
+						<h2>More snippets can be found at:</h2>
+						<a href="https://github.com/paulirish/devtools-addons/wiki/Snippets">https://github.com/paulirish/devtools-addons/wiki/Snippets</a>
+						<a href="http://bgrins.github.io/devtools-snippets/">http://bgrins.github.io/devtools-snippets/</a>
+						<a href="https://github.com/bahmutov/code-snippets">https://github.com/bahmutov/code-snippets</a>
+					</section>
+				</section>
+
+				<section>
+					<img src="images/chrome-canary.png" alt="Chrome Canary icon" class="canary icon">
+					<h1>Screenshots</h1>
+					<p>Both the Network and Timeline tabs support screenshots, but in two different ways.</p>
+				</section>
+
+				<section>
+					<h2>Network tab filters</h2>
+					<p>The network tab proves powerful filters that can be used to find just what you are looking for, such as larger-than and status-code</p>
+					<p>Chrome will autocomplete the filters applicable to your data, so play around</p>
+				</section>		
+				
+				<section>
+					<h2>Timeline Tab</h2>
+					<p class="fragment">Incredibly powerful</p>
+					<p class="fragment">Incredibly confusing</p>
+					<p class="fragment">Learning the Timeline is worth a session by itself</p>
+				</section>
+
+				<section>
+					<img src="images/chrome-canary.png" alt="Chrome Canary icon" class="canary icon">
+					<img src="images/slow-frame.png" alt="DevTools slow frame screenshot">
+				</section>
+
+				<section>
+					<img src="images/forced-async.png" alt="DevTools slow frame screenshot">
+				</section>
+
+				<section>
+					<h1>Fun!</h1>
+				</section>
+
+				<section>
+					<h2>Its DevTools all the way down</h2>
+					<p class="fragment">The DevTools themselves are just a web app that can be edited by opening DevTools on them if they are undocked!</p>
+				</section>
+
+				<section>
+					<h2>Enable DevTools Experiments</h2>
+					<img src="images/chrome-flags.png" alt="Chrome Flag for DevTools Experiments">
+				</section>
+
+				<section>
+					<h2>Ascii video in the Console</h2>
+					<a href="http://neax.de/blog/console/">http://neax.de/blog/console/</a>
+				</section>
+
+
+
 
 				<section>
 					<section>

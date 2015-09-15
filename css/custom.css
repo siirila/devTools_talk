@@ -17,3 +17,20 @@
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6{
 	text-transform: initial;
 }
+
+.reveal .icon{
+	margin: 0;
+	background: inherit;
+	border: none;
+}
+
+.reveal .icon_column{
+	width: 40px;
+}
+
+.reveal .canary{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 75px;
+}
