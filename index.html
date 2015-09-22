@@ -38,7 +38,9 @@
 	<body>
 
 		<div class="reveal">
-
+			<div class="contact_info twitter">
+				<img src="images/twitterLogo.png" alt="Twitter logo"><span>jtsiirila</span>
+			</div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
@@ -77,12 +79,12 @@
 							<td>Stable</td>
 							<td>Standard released version. Major updates every 6 weeks.</td>
 						</tr>
-						<tr>
+						<tr class="fragment fade-out" data-fragment-index="1">
 							<td class="icon_column"><img src="images/chrome.png" alt="Chrome icon" class="icon"></td>
 							<td>Beta</td>
 							<td>One step ahead of stable. Major updates every 6 weeks.</td>
 						</tr>
-						<tr>
+						<tr class="fragment fade-out" data-fragment-index="1">
 							<td class="icon_column"><img src="images/chrome.png" alt="Chrome icon" class="icon"></td>
 							<td>Dev</td>
 							<td>First tested version. Updated 2-3 times per week.</td>
@@ -92,27 +94,7 @@
 							<td>Canary</td>
 							<td>Bleeding edge. Released daily. Untested and could be broken.</td>
 						</tr>
-					</table>
-				</section>
-
-				<section>
-					<h2>Chrome Channels</h2>
-					<table>
-						<tr>
-							<th></th>
-							<th>Channel</th>
-							<th>Description</th>
-						</tr>
-						<tr>
-							<td class="icon_column"><img src="images/chrome.png" alt="Chrome icon" class="icon"></td>
-							<td>Stable</td>
-							<td>Standard released version. Major updates every 6 weeks.</td>
-						</tr>
-						<tr>
-							<td class="icon_column"><img src="images/chrome-canary.png" alt="Chrome canary icon" class="icon"></td>
-							<td>Canary</td>
-							<td>Bleeding edge. Released daily. Untested and could be broken.</td>
-						</tr>
+						<tr></tr>
 					</table>
 				</section>
 
@@ -142,21 +124,11 @@
 				<section>
 					<p>When editing <em style="color:#00DD55;">almost</em> any string containing a number in the Elements tab, the arrow keys can be used to increment/decrement the value</p>
 					<p class="point1">This works in suprising places, such as on Hex values</p>
-					<p class="point1">Hold the <kbd>shift</kbd> key to increment/decrement by 10 with the arrow keys</p>
-					<p class="point3">Hold the <kbd>alt</kbd> key to increment/decrement by .1 with the arrow keys</p>
+					<p class="point1 fragment">Hold the <kbd>shift</kbd> key to increment/decrement by 10 with the arrow keys</p>
+					<p class="point3 fragment">Hold the <kbd>alt</kbd> key to increment/decrement by .1 with the arrow keys</p>
 				</section>
 
-				<section>
-					<p>When editing spacing such as margin or padding, try editing them from the box model on the Elements sidebar directly</p>
-					<div><kbd>&#8593;</kbd></div>
-					<div>
-						<kbd>&#8592;</kbd>
-						<kbd>&#8595;</kbd>
-						<kbd>&#8594;</kbd>
-					</div>
-				</section>
-
-				<section>
+				<section data-background="images/northern-lights.jpeg">
 					<p>When using the color picker to match a color, if you move the mouse over the page a magnifying glass will appear that allows you to pick a specific pixel’s color</p>
 				</section>
 
@@ -278,10 +250,11 @@
 									<kbd>Ctrl</kbd> + <kbd>G</kbd>
 								</td>
 								<td>
-									Jump to a specific line number in the current file. Can also be done using the Search for file by name dialog by putting a : at the start
+									Jump to a specific line number in the current file.
 								</td>
 							</tr>
 						</table>
+						<p>Can also be done using the Search for file by name dialog by putting a : at the start</p>
 					</section>
 					<section>
 						<table>
@@ -320,26 +293,6 @@
 								</td>
 								<td>
 									List and search functions in current file
-								</td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<table>
-							<tr>
-								<th>Mac</th>
-								<th>Windows</th>
-								<th>Action</th>
-							</tr>
-							<tr>
-								<td>
-
-								</td>
-								<td>
-									
-								</td>
-								<td>
-									
 								</td>
 							</tr>
 						</table>
@@ -515,9 +468,10 @@
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: true,
-				progress: true,
+				progress: false,
 				history: true,
 				center: true,
+				overview: false,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 

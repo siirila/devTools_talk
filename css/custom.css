@@ -1,4 +1,4 @@
-.reveal .kbd, .reveal kbd{
+.reveal .kbd, .reveal kbd {
     background-color: #f7f7f7;
     border: 1px solid #ccc;
     color: #333;
@@ -14,23 +14,44 @@
     border-radius: 3px
 }
 
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6{
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
 	text-transform: initial;
 }
 
-.reveal .icon{
+.reveal .icon {
 	margin: 0;
 	background: inherit;
 	border: none;
 }
 
-.reveal .icon_column{
+.reveal .icon_column {
 	width: 40px;
 }
 
-.reveal .canary{
+.reveal .canary {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 75px;
+}
+
+.reveal p {
+	color: white;
+}
+
+.contact_info {
+	position: absolute;
+	top: 0;
+}
+
+.twitter {
+	color: #55ACEE;
+}
+
+.twitter img {
+	width: 50px;
+}
+
+.twitter span {
+	vertical-align: super;
 }
