@@ -22,10 +22,7 @@
 	margin: 0;
 	background: inherit;
 	border: none;
-}
-
-.reveal .icon_column {
-	width: 40px;
+	width: 100px;
 }
 
 .reveal .canary {
@@ -54,4 +51,9 @@
 
 .twitter span {
 	vertical-align: super;
+}
+
+/* Bootstrap overrides */
+.btn-lg {
+	font-size: 40px;
 }
