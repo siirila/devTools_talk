@@ -301,50 +301,59 @@
 				</section>
 
 				<section>
-					<p>You can set breakpoints for DOM tree modifications including attribute changes and element removal. This is a very easy and powerful way to find what code is modifying a piece of the DOM.</p>
+					<p>Breakpoints for DOM tree modifications including attribute changes and element removal.</p>
 					<button class="btn btn-primary btn-lg" id="btn-dom-modification">Click Me!</button>
 				</section>
 
 				<section>
 					<h2>Multi-carat</h2>
 					<p>No code editor today is complete without multi-carat support.</p>
-					<p>Hold <kbd>Cmd</kbd> (<kbd>Ctrl</kbd> on Windows) when selecting text to edit and it will allow multiple text selections. An easier way to select multiple copies of the same word is with <kbd>Cmd</kbd> + <kbd>D</kbd> (<kbd>Ctrl</kbd> + <kbd>D</kbd> on Windows), which will select the next occurrence each time.</p>
+					<p>Hold <kbd>Cmd</kbd> (<kbd>Ctrl</kbd> on Windows) when selecting text to edit and it will allow multiple text selections.</p>
+					<p class="fragment">An easier way to select multiple copies of the same word is with <kbd>Cmd</kbd> + <kbd>D</kbd> (<kbd>Ctrl</kbd> + <kbd>D</kbd> on Windows), which will select the next occurrence each time.</p>
 				</section>
 
 				<section>
 					<section>
 						<h1>Console</h1>
-						<p>The console object has many more options than just logging, and using them can level up your development</p>
+						<h2>More than just console.log</h2>
 					</section>
-					<section>
+					<section data-state="console-clear">
 						<h2>console.clear() or clear()</h2>
-						<p>Clears the console output. Useful to clear the log before the section of code being worked on so you don't have to search through the console</p>
+						<p>Clears the console output.</p>
+						<aside class="notes">Useful to clear the log before the section of code being worked on so you don't have to search through the console</aside>
 					</section>
-					<section>
+					<section data-state="console-assert">
 						<h2>console.assert(expression, object)</h2>
-						<p>Throws an error, and a stack trace, if the expression passed into it is false. Very useful in troubleshooting code issues that don't generate an error by default.</p>
+						<p>Throws an error and stack trace if the expression passed into it is false.</p>
+						<aside class="notes">Very useful in troubleshooting code issues that don't generate an error by default.</aside>
 					</section>
 					<section>
 						<h2>console.count(label)</h2>
-						<p>Logs the # of times that count has been invoked at that line with that label. Allows for powerful logging of loops and other low level occurrances.</p>
+						<p>Logs the # of times that count has been invoked at that line with that label.</p>
+						<button class="btn btn-primary btn-lg btn-count">Star Wars</button>
+						<button class="btn btn-primary btn-lg btn-count">Star Trek</button>
+						<button class="btn btn-primary btn-lg btn-count">Dr. Who</button>
+						<aside class="notes"> Allows for powerful logging of loops and other low level occurrances.</aside>
 					</section>
-					<section>
-						<h2>console.profile([label]) and console.profileEnd()</h2>
+					<section data-state="console-profile">
+						<h2>console.profile([label]) console.profileEnd()</h2>
 						<p>Starts and stop a JavaScript CPU profile if the DevTools are open</p>
+						<button class="btn btn-primary btn-lg" id="btn-profile-end">End Profile</button>
 					</section>
-					<section>
-						<h2>console.time(label) and console.timeEnd(label)</h2>
+					<section data-state="console-time">
+						<h2>console.time(label) console.timeEnd(label)</h2>
 						<p>Starts and stops a timer for the specified label. When stopped, the time elapsed is displayed in the console.</p>
+						<button class="btn btn-primary btn-lg" id="btn-time-end">End Timer</button>
 					</section>
 					<section>
 						<h2>$()</h2>
 						<h2>$$()</h2>
 						<p>Aliases for document.querySelector() and document.querySelectorAll() respectively.</p>
-						<small>Only works if you aren't using a library like JQuery that already defines the methods</small>
 					</section>
-					<section id="copy_to_clipboard">
+					<section id="copy-to-clipboard">
 						<h2>copy()</h2>
 						<p>Copies whatever element is passsed into it to the clipboard</p>
+						<aside class="notes">copy($("#copy-to-clipboard")[0])</aside>
 					</section>
 					<section>
 						<h2>monitor(function)</h2>
@@ -464,6 +473,7 @@
 		<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+		<script src="js/custom.js"></script>
 
 		<script>
 
