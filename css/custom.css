@@ -51,12 +51,19 @@
 	color: #55ACEE;
 }
 
-.twitter img {
+.contact_info img {
 	width: 50px;
 }
 
-.twitter span {
+.contact_info span {
 	vertical-align: super;
+	padding-left: 10px;
+}
+
+.github_contact_info {
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 /* Bootstrap overrides */
