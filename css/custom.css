@@ -27,13 +27,19 @@
 
 .reveal .canary {
 	position: absolute;
-	top: 0;
+	top: -100px;
 	left: 0;
 	width: 75px;
 }
 
 .reveal p {
 	color: white;
+}
+
+.reveal .inline-answer {
+	display: inline-block;
+	margin-left: 10px;
+	vertical-align: -webkit-baseline-middle;
 }
 
 .contact_info {
@@ -55,5 +61,5 @@
 
 /* Bootstrap overrides */
 .btn-lg {
-	font-size: 40px;
+	font-size: 1.6em;
 }

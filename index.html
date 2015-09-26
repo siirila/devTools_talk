@@ -113,7 +113,7 @@
 				</section>
 
 				<section>
-					<p>Navigate the DOM in the Elements tab using arrow keys</p>
+					<p>Navigate the DOM in the Elements panel using arrow keys</p>
 					<div><kbd>&#8593;</kbd></div>
 					<div>
 						<kbd>&#8592;</kbd>
@@ -123,7 +123,7 @@
 				</section>
 
 				<section>
-					<p>When editing <em style="color:#00DD55;">almost</em> any string containing a number in the Elements tab, the arrow keys can be used to increment/decrement the value</p>
+					<p>When editing <em style="color:#00DD55;">almost</em> any string containing a number in the Elements panel, the arrow keys can be used to increment/decrement the value</p>
 					<p class="point1">This works in suprising places, such as on Hex values</p>
 					<p class="point1 fragment">Hold the <kbd>shift</kbd> key to increment/decrement by 10 with the arrow keys</p>
 					<p class="point3 fragment">Hold the <kbd>alt</kbd> key to increment/decrement by .1 with the arrow keys</p>
@@ -135,6 +135,11 @@
 
 				<section>
 					<p>Shift+click on a color in the sidebar to switch between color formats (rgb, hex, hsl)</p>
+				</section>
+
+				<section>
+					<img src="images/chrome-canary.png" alt="Chrome Canary icon" class="canary icon">
+					<h1>Select colors from the sites color palate</h1>
 				</section>
 
 				<section>
@@ -298,6 +303,26 @@
 							</tr>
 						</table>
 					</section>
+					<section>
+						<table>
+							<tr>
+								<th>Mac</th>
+								<th>Windows</th>
+								<th>Action</th>
+							</tr>
+							<tr>
+								<td>
+									<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd>
+								</td>
+								<td>
+									<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd>
+								</td>
+								<td>
+									Dock/Undock the DevTools with the browser window
+								</td>
+							</tr>
+						</table>
+					</section>
 				</section>
 
 				<section>
@@ -351,16 +376,18 @@
 						<p>Aliases for document.querySelector() and document.querySelectorAll() respectively.</p>
 					</section>
 					<section id="copy-to-clipboard">
-						<h2>copy()</h2>
+						<h2>*copy()</h2>
 						<p>Copies whatever element is passsed into it to the clipboard</p>
+						<br>
+						<p>*: Only exists inside the console!</p>
 						<aside class="notes">copy($("#copy-to-clipboard")[0])</aside>
 					</section>
 					<section>
-						<h2>monitor(function)</h2>
+						<h2>*monitor(function)</h2>
 						<p>When the specified function is called, a message is logged with the method name and arguments to the method.</p>
 					</section>
 					<section>
-						<h2>monitorEvents(object,[events])</h2>
+						<h2>*monitorEvents(object,[events])</h2>
 						<p>When one of the specified events occurs on the object, log the event object to the console.</p>
 					</section>
 				</section>
@@ -371,24 +398,36 @@
 
 				<section>
 					<h1>Preserve Log</h1>
-					<p>Keeps the log between full page navigation. An option exists for this in both the Network tab and the Console</p>
+					<p>Keeps the log between full page navigation. An option exists for this in both the Network panel and the Console</p>
 				</section>
 
 				<section>
-					<p>Right click on any XHR request in the Network tab to have the option to replay that request. Much simpler than using a tool like Postman when simply repeating a request.</p>
+					<h1>XHR Instant Replay!</h1>
+					<p>Right click on any XHR request in the Network panel to have the option to replay that request</p>
 				</section>
 
 				<section>
-					<p>Show additional/fewer columns in the Network tab by right clicking on any column header and choosing the additional columns to show.</p>
+					<h1>Show/Hide columns in the Network Panel</h1>
 				</section>
 
 				<section>
-					<p>When debugging code, you can rerun the code in the any frame in the Call Stack by right clicking the frame and selecting to Restart Frame</p>
+					<h1>Rewind Debugger</h1>
+					<p>When debugging code, rerun the code in the any frame in the Call Stack by right clicking the frame and selecting to Restart Frame</p>
+					<aside class="notes">Set breakpoint in navigateRight at line 3620</aside>
 				</section>
 
 				<section>
-					<p>Tired of having sequential messages stacked in the Console?</p>
-					<p class="fragment">Enable "Show timestamps" in the Settings to disable message stacking!</p>
+					<h1>Conditional Breakpoints</h1>
+					<button class="btn btn-primary btn-lg" id="btn-conditional-break">2 + 2 =</button>
+					<h2 id="conditional-break-total" class="inline-answer"></h2>
+				</section>
+
+				<section>
+					<div style="position: relative;">
+						<h2 class="fragment fade-out" data-fragment-index="1">Tired of having sequential messages stacked in the Console?</h2>
+						<h2 class="fragment" data-fragment-index="1" style="position:absolute; top: 0;">Enable "Show timestamps" in the Settings</h2>
+					<div>
+					<button class="btn btn-primary btn-lg" id="btn-stack-msg">Repeat</button>
 				</section>
 
 				<section>
@@ -396,8 +435,10 @@
 						<h1>Snippets</h1>
 					</section>
 					<section>
-						<p>The Sources tab allows you to define, store, and run snippets of JavaScript</p>
-						<p class="fragment">This lets you store useful utilities to run on any page.</p>
+						<h2>The Sources panel allows you to create, store, and run snippets of JavaScript</h2>
+					</section>
+					<section>
+						<h2>Store useful utilities</h2>
 					</section>
 					<section>
 						<h2><a href="https://gist.github.com/nicdaCosta/4072412">Grep</a></h2>
@@ -405,46 +446,41 @@
 					</section>
 					<section>
 						<h2><a href="https://github.com/bgrins/devtools-snippets/blob/master/snippets/jquerify/jquerify.js">jQuerify</a></h2>
-						<p>Add jQuery to a page if it doesn't have it already.</p>
+						<p>Add jQuery to a page that doesn't have it</p>
 					</section>
 					<section>
 						<h2><a href="https://github.com/bgrins/devtools-snippets/blob/master/snippets/log-globals/log-globals.js">Log Globals</a></h2>
-						<p>Logs global variables to the console. Use to find leaked globals.</p>
+						<p>Find leaked globals</p>
 					</section>
 					<section>
 						<h2>More snippets can be found at:</h2>
-						<a href="https://github.com/paulirish/devtools-addons/wiki/Snippets">https://github.com/paulirish/devtools-addons/wiki/Snippets</a>
-						<a href="http://bgrins.github.io/devtools-snippets/">http://bgrins.github.io/devtools-snippets/</a>
-						<a href="https://github.com/bahmutov/code-snippets">https://github.com/bahmutov/code-snippets</a>
+						<p><a href="https://github.com/paulirish/devtools-addons/wiki/Snippets">https://github.com/paulirish/devtools-addons/wiki/Snippets</a></p>
+						<p><a href="http://bgrins.github.io/devtools-snippets/">http://bgrins.github.io/devtools-snippets</a><br></p>
+						<p><a href="https://github.com/bahmutov/code-snippets">https://github.com/bahmutov/code-snippets</a></p>
 					</section>
 				</section>
 
 				<section>
-					<img src="images/chrome-canary.png" alt="Chrome Canary icon" class="canary icon">
 					<h1>Screenshots</h1>
-					<p>Both the Network and Timeline tabs support screenshots, but in two different ways.</p>
+					<p>Both the Network and Timeline panels support screenshots, but in two different ways.</p>
 				</section>
 
 				<section>
-					<h2>Network tab filters</h2>
-					<p>The network tab proves powerful filters that can be used to find just what you are looking for, such as larger-than and status-code</p>
-					<p>Chrome will autocomplete the filters applicable to your data, so play around</p>
+					<h1>Network panel filters</h1>
+					<p>Many different filters such as larger-than and domain</p>
+					<p class="fragment">Chrome will autocomplete the filters applicable to your data, so play around</p>
 				</section>		
 				
 				<section>
-					<h2>Timeline Tab</h2>
-					<p class="fragment">Incredibly powerful</p>
-					<p class="fragment">Incredibly confusing</p>
-					<p class="fragment">Learning the Timeline is worth a session by itself</p>
+					<h1>Timeline panel</h1>
 				</section>
 
 				<section>
-					<img src="images/chrome-canary.png" alt="Chrome Canary icon" class="canary icon">
-					<img src="images/slow-frame.png" alt="DevTools slow frame screenshot">
+					<img src="images/slow-frame.png" alt="DevTools slow frame screenshot" class="stretch">
 				</section>
 
 				<section>
-					<img src="images/forced-async.png" alt="DevTools slow frame screenshot">
+					<img src="images/forced-async.png" alt="DevTools forced asynchronous frame screenshot" class="stretch">
 				</section>
 
 				<section>
@@ -452,17 +488,17 @@
 				</section>
 
 				<section>
-					<h2>Its DevTools all the way down</h2>
-					<p class="fragment">The DevTools themselves are just a web app that can be edited by opening DevTools on them if they are undocked!</p>
+					<h1>DevTools all the way down</h1>
+					<p class="fragment">The DevTools themselves are a web app that can be edited by opening DevTools on them if they are undocked!</p>
 				</section>
 
 				<section>
-					<h2>Enable DevTools Experiments</h2>
-					<img src="images/chrome-flags.png" alt="Chrome Flag for DevTools Experiments">
+					<h1>Enable DevTools Experiments</h1>
+					<img src="images/chrome-flags.png" alt="Chrome Flag for DevTools Experiments" class="stretch">
 				</section>
 
 				<section>
-					<h2>Ascii video in the Console</h2>
+					<h1>Ascii video in the Console</h1>
 					<a href="http://neax.de/blog/console/">http://neax.de/blog/console/</a>
 				</section>
 

@@ -32,3 +32,13 @@ Reveal.addEventListener("console-time", function() {
 $("#btn-time-end").on('click', function(event) {
 	console.timeEnd("timeSlide-timer");
 });
+
+$("#btn-conditional-break").on('click', function(event) {
+	var total = 0;
+	total = 2 + 2;
+	$("#conditional-break-total").text(total);
+});
+
+$("#btn-stack-msg").on('click', function(event) {
+	console.log("over and");
+});
